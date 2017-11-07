@@ -8,6 +8,10 @@ class List
   def add(task)
     all_tasks << task
   end
+
+  def show
+    all_tasks
+  end
 end
 
 class Task
@@ -22,8 +26,7 @@ end
 if __FILE__ == $PROGRAM_NAME
   my_list = List.new
   puts 'You created a new list!'
-  my_list.add(Task.new('Do the dishes'))
-  
-
+  my_tasks = my_list.add(Task.new('Do the dishes'))
+  p my_list.show
 end
 
